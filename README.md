@@ -1,0 +1,1 @@
+Self notes to track learning React and Redux.
