@@ -13,9 +13,10 @@
     * Name (div, span, script)
     * Attributes: key-value pairs that add more information
     * Children (optional)
-        React.createElement('Name', {
+        ```React.createElement('Name', {
         href: "https://github.com/emptylaughter"
         , "EmptyLaughter"})
+        ```
 
 ## Sources
 *https://teamtreehouse.com
