@@ -56,7 +56,7 @@ DELETE FROM employees WHERE EMPLOYEE_ID = 1001;
     * Reduce the number of tables
 
 ## Models and Migrations
-Knowing the basic commands and understanding what the database layout is supposed to look like helps with understanding how to create models, transfer them to the database, and map the data. Creating a table is possible through commandline `>sqlite3 Employees.db`. But within a project, models can be implemented and migrated to specified database.
+Knowing the basic commands and understanding what the database layout is supposed to look like helps with understanding how to create models, transfer them to the database, and map the data. Creating a table is possible through commandline `>sqlite3 Employees.db`. But within a project, models can be implemented and migrated to a specified database.
 
 Model ex.
 ```
@@ -77,7 +77,7 @@ Class Employees(db.Model):
         return Employees.query.all()
 ```
 
-Migrations "propagate changes" between the project model code and the database schema. One way to migrate would be to use Flask-Migrate, which is described in the RESTful API guide listed underneath Sources.
+Migrations "propagate changes" between the project model code and the database schema. One way to migrate would be to use Flask-Migrate, which is described in the RESTful API guide listed under Sources.
 
 ## Sources
 * SQLite tutorial: https://www.tutorialspoint.com/sqlite/sqlite_create_table.htm
