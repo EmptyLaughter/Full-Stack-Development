@@ -1,7 +1,7 @@
 # React Notes
 
 ## Why React
-* ** Front end that handles views for websites and mobile apps **
+* **Front end that handles views for websites and mobile apps**
 * Declarative: can describe overall result rather than describing individual steps to achieve result
 * Component based: separates components to allow for reusablity
 * Can be used with other frameworks
@@ -77,6 +77,7 @@
 ### Props
 * Immutable
 * Children components pass data from state using props
+
 App.jsx
 ```
 return(
