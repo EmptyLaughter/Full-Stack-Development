@@ -16,14 +16,17 @@ A user will try to access an application. The application (SP) will get the orig
 
 ## Configuring Python Toolkit
 1. src directory: python-saml-master/src/one/login/saml2
+    
     **place holder text here**
 
-2. demo-flask directory: 
-    
+2. Talk to IdP IT guy to get info that IdP expects and SP requirements
+
+3. demo-flask directory: 
+    ```
     > ls demo-flask
     index.py    requirements.txt    saml    templates
+    ```
     
-
     index.py: main flask file
     
     templates directory: pretty templates for visuals
@@ -31,10 +34,10 @@ A user will try to access an application. The application (SP) will get the orig
     requirements.txt: states flask version needed
 
     saml directory:
-    
+    ```
     > ls saml
     advanced_settings.json    certs    settings.json
-    
+    ```
 
     advanced_settings.json: stores security settings
         * "security" and "signMetadata" hold signatures and encryptions required
@@ -44,18 +47,12 @@ A user will try to access an application. The application (SP) will get the orig
     certs: stores x509 public and private key
 
     settings.json: stores SP and IdP information
-
         * set "strict" to true
-
         * "sp"
             * "entityId": SP URI
-            
             * "assertionConsumerService": json object tells where and how authentication response message is returned to SP
-            
                 * "url": URL where response from IdP will be returned
-                
                 * "binding": SAML protocol binding; only HTTP-POST binding
-
         * "attributeConsumingService"
             * (optional) json object for requested attributes
         * "singleLogoutService"
@@ -75,8 +72,6 @@ A user will try to access an application. The application (SP) will get the orig
             * "binding": SAML protocol binding; only HTTP-Redirect binding
         * "x509cert": public x509 certificate of IdP; can use a fingerprint (look at github onelogin documentation for more info about fingerprinting)
         * "x509certMulti": in the case that IdP uses different certificates for signing/encryption
-
-3. Talk to IdP IT guy to get info that IdP expects and SP requirements
 
 4. setup.py: setup information-- confirm and decide how to integrate with own application's setup.py
 
