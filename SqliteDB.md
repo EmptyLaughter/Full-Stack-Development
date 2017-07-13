@@ -1,4 +1,5 @@
 # Sqlite3 Database Notes
+### Condensed notes from tutorials for self use
 
 ## Why SQLite
 * Lightweight database

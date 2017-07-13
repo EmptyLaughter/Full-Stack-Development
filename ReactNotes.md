@@ -1,4 +1,5 @@
 # React Notes
+### Condensed notes from tutorials for self use
 
 ## Why React
 * **Front end that handles views for websites and mobile apps**

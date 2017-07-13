@@ -1,1 +1,1 @@
-Self notes to track learning React and Redux.
+Self notes to track learning full stack web development.
