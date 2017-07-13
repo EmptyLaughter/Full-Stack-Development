@@ -15,14 +15,14 @@
 A user will try to access an application. The application (SP) will get the origanization (IdP) to validate user identity. IdP will tell SP things are a go, which then creates a session for the user. The user will be pleased with the invisible magic that goes on behind the scenes.
 
 ## Configuring Python Toolkit
-1. src directory: `python-saml-master/src/one/login/saml2`
+1. src directory: python-saml-master/src/one/login/saml2
     **place holder text here**
 
 2. demo-flask directory: 
-    ```
+    
     > ls demo-flask
     index.py    requirements.txt    saml    templates
-    ```
+    
 
     index.py: main flask file
     
@@ -31,66 +31,66 @@ A user will try to access an application. The application (SP) will get the orig
     requirements.txt: states flask version needed
 
     saml directory:
-    ```
+    
     > ls saml
     advanced_settings.json    certs    settings.json
-    ```
+    
 
     advanced_settings.json: stores security settings
-        * `"security"` and `"signMetadata"` hold signatures and encryptions required
-        * `"contactPerson"`: who to contact when things go wrong
-        * `"organization"`: organization info
+        * "security" and "signMetadata" hold signatures and encryptions required
+        * "contactPerson": who to contact when things go wrong
+        * "organization": organization info
 
     certs: stores x509 public and private key
 
     settings.json: stores SP and IdP information
 
-        * set `"strict"` to true
+        * set "strict" to true
 
-        * `"sp"`
-            * `"entityId"`: SP URI
+        * "sp"
+            * "entityId": SP URI
             
-            * `"assertionConsumerService"`: json object tells where and how authentication response message is returned to SP
+            * "assertionConsumerService": json object tells where and how authentication response message is returned to SP
             
-                * `"url"`: URL where response from IdP will be returned
+                * "url": URL where response from IdP will be returned
                 
-                * `"binding"`: SAML protocol binding; only HTTP-POST binding
+                * "binding": SAML protocol binding; only HTTP-POST binding
                 
-        * `"attributeConsumingService"`
+        * "attributeConsumingService"
         
             * (optional) json object for requested attributes
-        * `"singleLogoutService"`
+        * "singleLogoutService"
         
             * json object that tells where and how logout response message is returned to SP
 
-            * `"url"`: URL where response from IdP will be returned
+            * "url": URL where response from IdP will be returned
 
-            * `"binding`: SAML protocol binding; only HTTP-Redirect binding
+            * "binding: SAML protocol binding; only HTTP-Redirect binding
 
-        * `"NameIDFormat`
-            * choose format from `python-saml-master/src/one/login/saml2/constants.py`
+        * "NameIDFormat
+            * choose format from python-saml-master/src/one/login/saml2/constants.py
 
-        * `"x509cert"` and `"privateKey"` should be placed in certs folder and never published for others to see
+        * "x509cert" and "privateKey" should be placed in certs folder and never published for others to see
 
-        * `"idp"`
+        * "idp"
 
-            * `"entityId"`: IdP URI
+            * "entityId": IdP URI
 
-            * `"singleSignOnService"`
+            * "singleSignOnService"
             
-                * `"url"`: URL where authentication request message will be sent to IdP
+                * "url": URL where authentication request message will be sent to IdP
                 
-                * `"binding"`: SAML protocol binding; only HTTP-Redirect binding
+                * "binding": SAML protocol binding; only HTTP-Redirect binding
             
-        * `"singleLogoutService`
+        * "singleLogoutService
     
-            * `"url"`: IdP location where single logout request (slo) will be sent
+            * "url": IdP location where single logout request (slo) will be sent
     
-            * `"binding"`: SAML protocol binding; only HTTP-Redirect binding
+            * "binding": SAML protocol binding; only HTTP-Redirect binding
 
-        * `"x509cert"`: public x509 certificate of IdP; can use a fingerprint (look at github onelogin documentation for more info about fingerprinting)
+        * "x509cert": public x509 certificate of IdP; can use a fingerprint (look at github onelogin documentation for more info about fingerprinting)
 
-        * `"x509certMulti"`: in the case that IdP uses different certificates for signing/encryption
+        * "x509certMulti": in the case that IdP uses different certificates for signing/encryption
 
 3. Talk to IdP IT guy to get info that IdP expects and SP requirements
 
