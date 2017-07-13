@@ -10,10 +10,11 @@
 ## SAML Flow: IdP and SP
 * **Identity Provider (IdP)**: organization that maintains list of users and way to authenticate
 * **Service Provider (SP)**: Hosts application
-A user will try to access an application. The application (SP) will get IdP to validate user identity. IdP will tell SP things are a go, which then creates a session for the user.
 
+A user will try to access an application. The application (SP) will get IdP to validate user identity. IdP will tell SP things are a go, which then creates a session for the user.
 
 ## Sources
 * Overview: https://developers.onelogin.com/saml
 * SAML intro: https://www.youtube.com/watch?v=0fmNoqz6Urw
-* Python toolkit: https://developers.onelogin.com/saml/python
+* Python toolkit and instructions: https://developers.onelogin.com/saml/python
+* Python toolkit documentation: https://github.com/onelogin/python-saml
