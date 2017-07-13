@@ -55,41 +55,25 @@ A user will try to access an application. The application (SP) will get the orig
                 * "url": URL where response from IdP will be returned
                 
                 * "binding": SAML protocol binding; only HTTP-POST binding
-                
+
         * "attributeConsumingService"
-        
             * (optional) json object for requested attributes
         * "singleLogoutService"
-        
             * json object that tells where and how logout response message is returned to SP
-
             * "url": URL where response from IdP will be returned
-
             * "binding: SAML protocol binding; only HTTP-Redirect binding
-
         * "NameIDFormat
             * choose format from python-saml-master/src/one/login/saml2/constants.py
-
         * "x509cert" and "privateKey" should be placed in certs folder and never published for others to see
-
         * "idp"
-
             * "entityId": IdP URI
-
             * "singleSignOnService"
-            
                 * "url": URL where authentication request message will be sent to IdP
-                
                 * "binding": SAML protocol binding; only HTTP-Redirect binding
-            
         * "singleLogoutService
-    
             * "url": IdP location where single logout request (slo) will be sent
-    
             * "binding": SAML protocol binding; only HTTP-Redirect binding
-
         * "x509cert": public x509 certificate of IdP; can use a fingerprint (look at github onelogin documentation for more info about fingerprinting)
-
         * "x509certMulti": in the case that IdP uses different certificates for signing/encryption
 
 3. Talk to IdP IT guy to get info that IdP expects and SP requirements
